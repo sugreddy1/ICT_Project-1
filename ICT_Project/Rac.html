@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body bgcolor="#99ccff">
+
+<p>Go to <a href="Oracle.html"> HOME PAGE </a></p>
+<p>Go to <a href="Aboutme.html"> ABOUT ME </a></p>
+
+<h2>RAC ARCHITECTURE</h2>
+<img src="img/raca.jpg" alt="Mountain View" style="width:900px;height:450px;">
+
+<p><b>Overview of Oracle Real Application Clusters</b></p>
+
+<p>* A cluster comprises multiple interconnected computers or servers that appear as if they are one server to end users and applications. Oracle RAC enables you to cluster Oracle databases. Oracle RAC uses Oracle Clusterware for the infrastructure to bind multiple servers so they operate as a single system.</p>
+
+<p>* Oracle Clusterware is a portable cluster management solution that is integrated with Oracle Database. Oracle Clusterware is also a required component for using Oracle RAC. In addition, Oracle Clusterware enables both single-instance Oracle databases and Oracle RAC databases to use the Oracle high-availability infrastructure. Oracle Clusterware enables you to create a clustered pool of storage to be used by any combination of single-instance and Oracle RAC databases.</p>
+
+<p>* Oracle Clusterware is the only clusterware that you need for most platforms on which Oracle RAC operates. You can also use clusterware from other vendors if the clusterware is certified for Oracle RAC.</p>
+
+<p><b>High Availability Framework:</b> The Oracle RAC high availability framework enables Oracle Clusterware to maintain components in a running state at all times. Oracle high availability implies that Oracle Clusterware monitors and restarts critical components if they stop, unless you override the restart processing. The high availability framework also provides alerts to clients when configurations change. This enables clients to immediately react to the changes, enabling application developers to hide outages and reconfigurations from end users. The scope of Oracle RAC high availability spans from the restarting of stopped Oracle Database processes, including some instance background processes, to failing over the processing of an entire instance to other available instances through the relocation of services.
+
+<p><b>Load Balancing Advisory:</b> This is the ability of the database to provide information to applications about the current service levels being provided by the database and its instances. Applications can take advantage of this information to direct connection requests to the instance that will provide the application request with the best service quality to complete the application's processing. Oracle Database has integrated its Java Database Connectivity (JDBC) and Oracle Data Provider for .NET (ODP.NET) connection pools, and the OCI Session pool to work with the load balancing information. Applications can use the integrated connection pools without programmatic changes. All applications achieve connection load balancing through the integration of the Oracle listener with the load balancing advisory.</p>
+
+<p><b>Services:</b> Cluster-managed services provide a powerful automatic workload management facility that enables the enterprise grid vision. Services are entities that you can define in Oracle RAC databases. In a cluster, services enable you to group database workloads and route the work to the optimal instances that are assigned to process the service. Furthermore, you can use services to define the resources that Oracle Database assigns to process workloads and to monitor workload resources. Applications that you assign to services transparently acquire the defined automatic workload management characteristics, including high availability and load balancing rules. Many Oracle Database features are integrated with services, such as Resource Manager (which enables you to restrict the resources that a service can use within an instance), Oracle Streams, Advanced Queuing (to achieve queue location transparency), and Oracle Scheduler (to map services to specific job classes).</p>
+
+In Oracle RAC databases, the service performance rules that you configure control the amount of work that Oracle Database allocates to each available instance for that service.
+
+<p><b>Connection Load Balancing:</b> Oracle Net Services provides connection load balancing for database connections. Connection load balancing occurs when the connection is created. Connections for a given service are balanced across all of the running instances that offer the service using information from the load balancing advisory. You should define how you want connections to be balanced in the service definition. However, you must still configure Oracle Net Services.<p>
+</body>
+</html>

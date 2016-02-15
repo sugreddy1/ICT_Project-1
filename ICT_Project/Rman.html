@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body bgcolor="#99ccff">
+
+<p>Go to <a href="Oracle.html"> HOME PAGE </a></p>
+<p>Go to <a href="Dataguard.html"> DATAGUARD ARCHITECTURE </a></p>
+
+<h2>Rman Architecture</h2>
+<img src="img/rman.gif" alt="Mountain View" style="width:500px;height:400px;">
+
+<p><b>RMAN CLIENT:</b> The client application that manages backup and recovery operations for a target database. The RMAN client can use Oracle Net to connect to a target database, so it can be located on any host that is connected to the target host through Oracle Net..</p>
+
+<p><b>TARGET DATABASE:</b> A database containing the control files, datafiles, and optional archived redo logs that RMAN backs up or restores. RMAN uses the target database control file to gather metadata about the target database and to store information about its own operations. The work of backup and recovery is performed by server sessions running on the target database.</p>
+
+<p><b>RECOVERY CATALOG DATABASE:</b> A database containing a recovery catalog, which contains metadata that RMAN uses to perform backup and recovery. You can create one recovery catalog that contains the RMAN metadata for multiple target databases. Unless you are using RMAN with a physical standby database, a recovery catalog is optional when using RMAN because RMAN stores its metadata in the control file of each target database.</p>
+
+<p><b>RECOVERY CATALOG SCHEMA:</b> The user within the recovery catalog database that owns the metadata tables maintained by RMAN. RMAN periodically propagates metadata from the target database control file into the recovery catalog.</p>
+
+<p><b>DUPLICATE DATABASE:</b> A copy of the primary database that you can use for testing purposes. The DBID is different from the database from which it was created.</p>
+
+<p><b>FAST RECOVERY AREA:</b> A disk location that you can use to store recovery-related files such as control file and online redo log copies, archived redo logs, flashback logs, and RMAN backups. Oracle Database and RMAN manage the files in the fast recovery area automatically.</p>
+
+<p><b>MEDIA MANAGER:</b> A vendor-specific application that enables RMAN to back up to a storage system such as tape.</p>
+
+<p><b>MEDIA MANAGEMENT CATALOG:</b> A vendor-specific repository of metadata about a media management application.</p>
+
+<p><b>ORACLE ENTERPRISE MANAGER:</b> A browser-based interface to the database, including backup and recovery through RMAN.</p>
+
+
+</body>
+</html>

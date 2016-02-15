@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body bgcolor="#99ccff">
+
+<p>Go to <a href="MAIN.html"> HOME PAGE </a></p>
+<p>Go to <a href="Rac.html"> RAC ARCHITECTURE </a></p>
+
+<h2>DATAGUARD ARCHITECTURE</h2>
+<img src="img/DG.gif" alt="Mountain View" style="width:900px;height:450px;">
+
+<p><b>DATAGUARD ARCHITECTURE:</b>Oracle Data Guard supports both physical standby and logical standby sites.</p>
+
+<p><b>* Physical Standby</b>: When the primary database transactions generate redo entries, a redo apply process keeps up the secondary databases with the exact block copies of the primary database.</p>
+
+<p><b>* Logical Standby</b>: SQL apply processes read the redo and convert it to SQL transactions. These are then applied to the secondary database.</p>
+
+<p><b>DATAGUARD MODES:</b> Oracle Data Guard can operate in 3 different modes:
+
+<p><b>* Maximum Protection:</b> Transactions are not allowed to commit until all redo data are written to the online redo logs and propagated to at least one synchronized secondary database. If for any reason, the primary database cannot propagate its redo stream to one secondary database, the primary will shutdown to ensure maximum protection mode.</p>
+<p><b>* Maximum Performance:</b> Transactions are not allowed to commit as soon as the redo are written to the online redo logs. The redo stream is asynchronously propagated to the secondary databases to ensure maximum performance mode.</p>
+<p><b>* Maximum Availability:</b> Transactions are not allowed to commit until all redo data are written to the online redo logs and propagated to at least one synchronized secondary database. If for any reason, the primary database cannot propagate its redo stream to one secondary database, the primary will NOT shutdown and operates as it it were in maximum performance mode until issues are fixed.</p>
+</body>
+</html>
